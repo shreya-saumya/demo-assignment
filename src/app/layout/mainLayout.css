@@ -1,0 +1,15 @@
+.wrapper {
+    height: 100vh;
+    display: flex;
+    background-color: #242C3B;
+    flex-direction: column;
+}
+
+.footer, .header {
+    height: 30px;
+}
+
+
+main {
+    flex: 1;
+}

@@ -1,21 +1,23 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import React from 'react'
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import BikeDescription from './app/pages/bikeDescription';
+// import ChooseBikePage from './app/pages/chooseBikePage';
+// import DetailedBike from './app/pages/detailedBike';
+// import MainLayout from './app/layout/mainLayout';
 
-export default function Router() {
+// export default function Router() {
 
-  return (
-    <div>
-     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="blogs" element={<Blogs />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+//   return (
+//     <div>
+//      <BrowserRouter>
+//       <Routes>
+//         <Route path="/" element={<MainLayout />}>
+//           <Route path="bikeDesc" element={<BikeDescription />} />
+//           <Route path="details" element={<DetailedBike />} />
+//         </Route>
+//       </Routes>
+//     </BrowserRouter>
         
-    </div>
-  )
-}
+//     </div>
+//   )
+// }

@@ -1,7 +1,10 @@
 import React from 'react'
+import FilterTab from '../components/chooseBike/filterTab'
 
-export default function chooseBikePage() {
+export default function ChooseBikePage() {
   return (
-    <div></div>
+    <div style={{marginTop:'50px'}}>
+        <FilterTab/>
+    </div>
   )
 }

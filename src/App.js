@@ -1,11 +1,14 @@
-import Router from "./routes";
+import MainLayout from "./app/layout/mainLayout";
+// import Router from "./routes";
+export const secondary = '#37B6E9'
+export const primary = '#353F54'
 
 
 function App() {
   return (
-    <div>
-     <Router/>
-    </div>
+
+    <MainLayout/>
+    // </div>
   );
 }
 
