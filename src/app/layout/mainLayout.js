@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/common/header'
-import Footer from '../components/common/footer'
+import Footer from '../components/common/footer/footer'
 import  './mainLayout.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BikeDescription from '../pages/bikeDescription';
@@ -15,13 +15,16 @@ export default function MainLayout() {
         <Header title={'Choose Your Bike'}  rightIcon={<AppIconButton imgSrc={'/assets/icons/search.svg'} isSelected />}/>
 
         <main>
-    <BrowserRouter>
+            <div class="scrollable_content">
+            <BrowserRouter>
       <Routes>
           <Route path="/" element={<ChooseBikePage />} /> 
           <Route path="/description" element={<BikeDescription />} />
           <Route path="/details" element={<DetailedBike />} />
       </Routes>
     </BrowserRouter>
+            </div>
+
         </main>
         <div class="footer">
             <Footer/>

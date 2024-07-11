@@ -1,15 +1,23 @@
 .wrapper {
-    height: 100vh;
-    display: flex;
-    background-color: #242C3B;
-    flex-direction: column;
+    background: #242C3B;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100%;
+    row-gap: 0rem;
+    height: 100%;
 }
 
-.footer, .header {
-    height: 30px;
+ .header {
+   grid-row:1;
+} 
+.footer{
+    grid-row: 3;
 }
 
 
 main {
-    flex: 1;
+    position: relative;
+    grid-row: 2;
+    overflow-y: auto;
+  
 }

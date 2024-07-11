@@ -27,9 +27,13 @@ export default function FilterTab() {
     ]
  
   return (
-    <div style={{display:'flex', justifyContent:'space-evenly'}}>
+    <div style={{display:'flex', justifyContent:'space-evenly' }}>
         {filterOptions.map((item, index)=>{
-            return <AppIconButton imgSrc={item.imgSrc} title={item.title} isSelected={currentIndex===index} onClickFunc={()=>setCurrentIndex(index)}/>
+            return <AppIconButton 
+            styleProp={{marginTop:`${index*(-10)+(filterOptions.length-1)*10}px`}}
+            imgSrc={item.imgSrc} title={item.title} 
+            isSelected={currentIndex===index} 
+            onClickFunc={()=>setCurrentIndex(index)}/>
         })}
         
     </div>
