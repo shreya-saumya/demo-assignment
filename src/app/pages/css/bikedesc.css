@@ -1,14 +1,36 @@
-.bike-description-modal-button{
-    box-shadow: 4px 4px 8px 0px #202633 inset;
-    box-shadow: -4px -4px 8px 0px #364055 inset;
-    padding: 10px 20px 10px 20px    
+.bike-description-modal-button {
+  box-shadow: 4px 4px 8px 0px #202633 inset;
+  box-shadow: -4px -4px 8px 0px #364055 inset;
+  padding: 10px 20px 10px 20px;
 }
-.bike-description-bottom-sheet{
-    background-color: #202633;
+.bike-description-bottom-sheet {
+  background-color: #202633;
 }
 .bike-description-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    
-  }
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.bike-description-sub-footer-button{
+  position: fixed;
+  bottom: 3%;
+  width: 40%;
+  right: 8%;
+  width: 160px;
+  height: 44px;
+  gap: 0px;
+  color:white;
+border-radius: 10px;
+opacity: 0px;
+
+}
+.bike-description-sub-footer-price{
+  position: fixed;
+  bottom: 3%;
+  color:white;
+  left:4%;
+  font-weight:400
+}
+[data-rsbs-overlay]{
+  background: linear-gradient(157.91deg, #353F54 0%, #222834 58.47%);
+}

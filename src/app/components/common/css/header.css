@@ -1,21 +1,20 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 20px;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
 }
 
 .icon {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .title {
-    flex: 1 1 auto;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 30px;
-    text-align: left;
-    color: white;
-    font-size: 24px;
-}   
+  flex: 1 1 auto;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  color: white;
+  font-size: 24px;
+}

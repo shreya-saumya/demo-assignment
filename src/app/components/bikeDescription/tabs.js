@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-export default function Tabs({currentTab, details }) {
+export default function Tabs({ currentTab, details }) {
   return (
-    <div>
-        {currentTab===1?<div>{details.description}</div>:currentTab===2&&<div>{details.specification}</div>}
-
+    <div style={{color:'white'}}>
+      {currentTab === 1 ? (
+        <div >{details.description}</div>
+      ) : (
+        currentTab === 2 && <div>{details.specification}</div>
+      )}
     </div>
-  )
+  );
 }

@@ -1,6 +1,29 @@
-.choose-bike-page-banner{
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 90%);
-    background: red;
-    text-align: center;
-    padding: 20px 20px 58px 20px;
+.choose-bike-page-banner {
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  background: linear-gradient(167.4deg, rgba(54, 62, 81, 0.6) 25.94%, rgba(25, 30, 38, 0.6) 68.26%);
+  backdrop-filter: blur(50px);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px 20px 58px 20px;
+}
+
+.choose_bike_page--grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (min-width: 600px) {
+  .choose_bike_page--grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (min-width: 900px) {
+  .choose_bike_page--grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
 }
