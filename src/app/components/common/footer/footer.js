@@ -7,25 +7,25 @@ export default function Footer() {
   const [currentIndex, setCurrentIndex ] = useState(0)
   const filterOptions=[
       {
-          imgSrc:'',
-          title:'All'
-      },
-      {
-          imgSrc:'/assets/filter/accessory.svg',
+          imgSrc:'/assets/icons/bicycle.svg',
           title:''
       },
       {
-          imgSrc:'/assets/filter/cycle.svg',
+          imgSrc:'/assets/icons/map.svg',
           title:''
       },
       {
-          imgSrc:'/assets/filter/mountain.svg',
+          imgSrc:'/assets/icons/cart.svg',
           title:''
       },
       {
-          imgSrc:'/assets/filter/Road.svg',
+          imgSrc:'/assets/icons/person.svg',
           title:''
-      }
+      },
+      {
+        imgSrc:'/assets/icons/doc.svg',
+        title:''
+    }
   ]
 return (
   <div style={{display:'flex', justifyContent:'space-evenly', padding:'20px' }}>

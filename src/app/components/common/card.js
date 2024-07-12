@@ -1,10 +1,18 @@
 import React from 'react'
-
-export default function Card({imgSrc, titleSlot}) {
+import './css/card.css'
+export default function Card({imgSrc, bikeDetails, styleProp, width, height}) {
   return (
-    <div>
-        <img src={imgSrc}/>
-        {titleSlot&&<div>{titleSlot}</div>}
+    <div style={{...styleProp}}>
+        <div  class="card" style={{height, width}} >
+        <img src={imgSrc} alt="some alt"/>
+        {bikeDetails&&
+        <div style={{color:'white'}}>
+            <div class='bike-name'>{bikeDetails.name}</div>
+            <div  class='bike-model'>{bikeDetails.model}</div>
+            <div class='bike-price'>{bikeDetails.price}</div>
+            </div>}
+        </div>
+   
     </div>
   )
 }

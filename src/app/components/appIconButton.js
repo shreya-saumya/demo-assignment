@@ -1,6 +1,6 @@
 import React from 'react'
 import './css/iconButton.css'
-import { primary, secondary, ternary } from '../../App'
+import {  secondary, ternary } from '../../App'
 export default function AppIconButton({isSelected, imgSrc,
     height='44px',
     width='44px',
