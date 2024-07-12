@@ -4,10 +4,12 @@ import Card from '../components/common/card'
 import AppIconButton from '../components/appIconButton'
 import './css/choosebike.css'
 import { useNavigate } from "react-router-dom";
+// import { getProductList } from '../../redux/actions/productListAction'
 
 
 export default function ChooseBikePage() {
   const navigate = useNavigate();
+
 
   const [currentIndex, setCurrentIndex] = useState()
   const cards=[
@@ -21,12 +23,15 @@ export default function ChooseBikePage() {
   },
     {imgSrc:'/assets/bikes/roadBike.svg', bikeDetails:{name:'Road Helmet',
     model:'SMITH - Trade', price:'$ 120'}},
+    {imgSrc:'/assets/bikes/roadBike.svg', bikeDetails:{name:'Road Helmet',
+    model:'SMITH - Trade', price:'$ 120'}},
 
   ]
   return (
     <div >
       
-          <Card imgSrc={'/assets/common/homepagemainBike.svg'} 
+        <Card imgSrc={'/assets/common/homepagemainBike.svg'} 
+          key={0}
         styleProp={{margin:'30px', textAlign:'center'}} onClickFunc={()=>{navigate('/description')}}/>
     
  
@@ -38,7 +43,7 @@ export default function ChooseBikePage() {
            headerSlot={
                   <div style={{display:'flex', justifyContent:'flex-end'}}>
                     <AppIconButton 
-                    styleProp={{background:'none'}}
+                    styleProp={{background:'none' }}
                     imgSrc={currentIndex===index? '/assets/common/heart-unselected.svg':'/assets/common/heart-selected.svg'}  
                     onClickFunc={()=>setCurrentIndex(index)}/>
                   </div>

@@ -3,12 +3,12 @@ import '../common/css/header.css'
 
 export default function Header({leftIcon='', title, rightIcon=''}) {
   return (
-    <header class="header">
-        {leftIcon && <div class="icon">
+    <header className="header">
+        {leftIcon && <div className="icon">
             {leftIcon}
         </div>}
-        <div class="title" style={{textAlign:leftIcon ?'center':''}}>{title}</div>
-        {rightIcon && <div class="icon right">
+        <div className="title" style={{textAlign:leftIcon ?'center':''}}>{title}</div>
+        {rightIcon && <div className="icon right">
             {rightIcon}
         </div>}
     </header>

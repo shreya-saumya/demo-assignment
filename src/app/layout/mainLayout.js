@@ -8,15 +8,15 @@ import { Outlet } from 'react-router-dom'
 
 export default function MainLayout() {
   return (
-    <div class="wrapper">
+    <div className="wrapper">
         <Header title={'Choose Your Bike'}  rightIcon={<AppIconButton imgSrc={'/assets/icons/search.svg'} isSelected />}/>
         <main>
-            <div class="scrollable_content">
+            <div className="scrollable_content">
                 <Outlet/>
             </div>
 
         </main>
-        <div class="footer">
+        <div className="footer">
             <Footer/>
         </div>
     </div>

@@ -1,31 +1,34 @@
-import React, {useState, useRef} from 'react'
+import React, {useState} from 'react'
 import { BottomSheet } from 'react-spring-bottom-sheet'
 import 'react-spring-bottom-sheet/dist/style.css'
 import './css/bikedesc.css'
-import { primary } from '../../App'
 import AppIconButton from '../components/appIconButton'
 
 
 
 export default function BikeDescription() {
-    const [open, setOpen] = useState(true)
-
+    const [open,] = useState(true)
+    const [isPoint, setIsPoint] = useState(false)
   return (
     <div style={{textAlign:'center'}}>
-        <img src={'/assets/bikes/bike-desc.png'}/>
-        <button onClick={() => setOpen(true)}>Open</button>
+        <img src={'/assets/bikes/bike-desc.png'} alt="bike desc"/>
         <BottomSheet
+          className='bike-description-bottom-sheet'
           open={open}
-          onDismiss={() => setOpen(false)}
+          onDismiss={() => {
+            setIsPoint(false)
+        }}
           blocking={false}
-          background='red'
-        //   snapPoints={({ maxHeight }) => [maxHeight / 4, maxHeight * 0.6]}
+          backgroundColor="red"
+          snapPoints={isPoint?({ maxHeight }) => [maxHeight / 2, maxHeight * 2]:()=>[]}
         >
-        <div style={{display:'flex', justifyContent:'space-around'}}>
-        <AppIconButton title={"Description"} width='auto' styleProp={{boxShadow:' 4px 4px 8px 0px #202633 inset',boxShadow: '-4px -4px 8px 0px #364055 inset'}}/>
-        <AppIconButton title={"Specification"} width='auto'/>
-         {/* <button class="bike-description-modal-button" style={{background:primary}} onClick={()=>setOpen(true)}>Description</button>
-         <button class="bike-description-modal-button" style={{background:primary}} onClick={()=>setOpen(true)}>Specification</button> */}
+        <div style={{display:'flex', justifyContent:'space-around', margin:'10px'}}>
+        <AppIconButton title={"Description"}  width='45%' 
+        styleProp={{
+        boxShadow: '-4px -4px 8px 0px #364055 inset'}}
+        onClickFunc={()=>setIsPoint(true)}
+        />
+        <AppIconButton title={"Specification"}  width='45%'/>
          </div>
         </BottomSheet>
     </div>

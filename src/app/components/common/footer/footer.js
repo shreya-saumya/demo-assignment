@@ -31,6 +31,7 @@ return (
   <div style={{display:'flex', justifyContent:'space-evenly', padding:'20px' }}>
       {filterOptions.map((item, index)=>{
           return <AppIconButton 
+          key={index}
           styleProp={ currentIndex === index ?
             { backgroundColor: secondary, transform: 'skew(0, 350deg)'}
             : {backgroundColor:primary }}

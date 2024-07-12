@@ -14,7 +14,7 @@ export default function AppIconButton({isSelected, imgSrc,
     color:'white'
   }}
      onClick={onClickFunc}>
-    {title || <img src={imgSrc} />}
+    {title || <img src={imgSrc} alt='photo.jpeg'/>}
     </button>
    
   )
