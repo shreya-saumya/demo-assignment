@@ -4,8 +4,6 @@ import Card from '../components/common/card'
 import AppIconButton from '../components/appIconButton'
 import './css/choosebike.css'
 import { useNavigate } from "react-router-dom";
-// import { getProductList } from '../../redux/actions/productListAction'
-
 
 export default function ChooseBikePage() {
   const navigate = useNavigate();
@@ -30,7 +28,7 @@ export default function ChooseBikePage() {
   return (
     <div >
       
-        <Card imgSrc={'/assets/common/homepagemainBike.svg'} 
+        <Card imgSrc={'/assets/bikes/bike-desc.png'} 
           key={0}
         styleProp={{margin:'30px', textAlign:'center'}} onClickFunc={()=>{navigate('/description')}}/>
     
