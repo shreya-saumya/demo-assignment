@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import FilterTab from '../components/chooseBike/filterTab'
 import Card from '../components/common/card'
+import AppIconButton from '../components/appIconButton'
+import './css/choosebike.css'
 
 export default function ChooseBikePage() {
+  const [currentIndex, setCurrentIndex] = useState()
   const cards=[
     {imgSrc:'/assets/bikes/newBike.svg',
     bikeDetails:{name:'Road Bike',
@@ -12,20 +15,30 @@ export default function ChooseBikePage() {
     bikeDetails:{name:'Road Helmet',
     model:'SMITH - Trade', price:'$ 120'}
   },
-    {imgSrc:'/assets/bikes/roadBike.svg'},
+    {imgSrc:'/assets/bikes/roadBike.svg', bikeDetails:{name:'Road Helmet',
+    model:'SMITH - Trade', price:'$ 120'}},
 
   ]
   return (
     <div >
-        <Card imgSrc={'/assets/common/homepagemainBike.svg'} 
-        styleProp={{display:'flex', flexDirection:'column', }}
-        width={'350px'}/>
+      
+      <Card imgSrc={'/assets/common/homepagemainBike.svg'} 
+        styleProp={{margin:'30px'}} onClickFunc={()=>{}}/>
+ 
         <FilterTab/>
-        <div  style={{display:'flex', flexDirection:'row', flexWrap:'wrap'}}>
-        {cards.map((item)=>{
+        <div  style={{display:'flex', flexDirection:'row', flexWrap:'wrap', padding:'10px', justifyContent:'space-between'}}>
+        {cards.map((item, index)=>{
            return  <Card imgSrc={item.imgSrc} 
-           styleProp={{display:'flex', flexDirection:'column', }}
-           width={'165px'} height={'241px'} bikeDetails={item.bikeDetails}/>
+           headerSlot={
+                  <div style={{display:'flex', justifyContent:'flex-end'}}>
+                    <AppIconButton 
+                    styleProp={{background:'none'}}
+                    imgSrc={currentIndex===index? '/assets/common/heart-unselected.svg':'/assets/common/heart-selected.svg'}  
+                    onClickFunc={()=>setCurrentIndex(index)}/>
+                  </div>
+          }
+           styleProp={{ transform: 'skew(0, 350deg)', padding:'20px' }}
+           bikeDetails={item.bikeDetails}/>
        
         })}
             </div>

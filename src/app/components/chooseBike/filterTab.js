@@ -9,21 +9,23 @@ export default function FilterTab() {
             title:'All'
         },
         {
-            imgSrc:'/assets/filter/accessory.svg',
+            imgSrc:'/assets/filter/bolt.svg',
             title:''
         },
         {
-            imgSrc:'/assets/filter/cycle.svg',
+            imgSrc:'/assets/filter/Road.svg',
+            title:''
+        },
+        {
+            imgSrc:'/assets/filter/accessory.svg',
             title:''
         },
         {
             imgSrc:'/assets/filter/mountain.svg',
             title:''
         },
-        {
-            imgSrc:'/assets/filter/Road.svg',
-            title:''
-        }
+     
+       
     ]
  
   return (
