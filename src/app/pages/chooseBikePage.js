@@ -1,43 +1,35 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import FilterTab from '../components/chooseBike/filterTab'
 import Card from '../components/common/card'
 import AppIconButton from '../components/appIconButton'
 import './css/choosebike.css'
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux'
+import { getAllProductList, setProductValue } from '../../redux/actions/productListAction'
 
 export default function ChooseBikePage() {
   const navigate = useNavigate();
-
-
+  const dispatch = useDispatch()
+  const product = useSelector(state=>state.product)
   const [currentIndex, setCurrentIndex] = useState()
-  const cards=[
-    {imgSrc:'/assets/bikes/newBike.svg',
-    bikeDetails:{name:'Road Bike',
-    model:'PEUGEOT - LR01', price:'$ 1,999.99'}
-  },
-    {imgSrc:'/assets/bikes/helment.svg',
-    bikeDetails:{name:'Road Helmet',
-    model:'SMITH - Trade', price:'$ 120'}
-  },
-    {imgSrc:'/assets/bikes/roadBike.svg', bikeDetails:{name:'Road Helmet',
-    model:'SMITH - Trade', price:'$ 120'}},
-    {imgSrc:'/assets/bikes/roadBike.svg', bikeDetails:{name:'Road Helmet',
-    model:'SMITH - Trade', price:'$ 120'}},
-
-  ]
+  useEffect(()=>{
+    dispatch(()=>getAllProductList())
+  },[])
   return (
     <div >
-      
-        <Card imgSrc={'/assets/bikes/bike-desc.png'} 
+        <Card imgSrc={product.flatOffProduct.imgSrc} 
           key={0}
-        styleProp={{margin:'30px', textAlign:'center'}} onClickFunc={()=>{navigate('/description')}}/>
-    
- 
+        styleProp={{margin:'30px', textAlign:'center'}}  onClickFunc={()=>{
+          dispatch(setProductValue(product.flatOffProduct))
+          navigate('/description')}}
+         bikeDetails={product.flatOffProduct.bikeDetails}/>
         <FilterTab/>
-        <div  style={{display:'flex', flexDirection:'row', flexWrap:'wrap', padding:'10px', justifyContent:'space-between'}}>
-        {cards.map((item, index)=>{
+        <div  style={{display:'flex', flexDirection:'row', flexWrap:'wrap', padding:'10px',
+         justifyContent:'space-between', rowGap:'20px', columnGap:'10px'}}>
+        {product.productList.map((item, index)=>{
            return  <Card imgSrc={item.imgSrc} 
            key={index}
+           onClickFunc={()=>{dispatch(setProductValue(item)); navigate('/description')}}
            headerSlot={
                   <div style={{display:'flex', justifyContent:'flex-end'}}>
                     <AppIconButton 

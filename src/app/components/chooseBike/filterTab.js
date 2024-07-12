@@ -29,7 +29,7 @@ export default function FilterTab() {
     ]
  
   return (
-    <div style={{display:'flex', justifyContent:'space-evenly' }}>
+    <div style={{display:'flex', justifyContent:'space-evenly', marginBottom:'20px' }}>
         {filterOptions.map((item, index)=>{
             return <AppIconButton 
             key={index}

@@ -6,3 +6,9 @@
 .bike-description-bottom-sheet{
     background-color: #202633;
 }
+.bike-description-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+  }
