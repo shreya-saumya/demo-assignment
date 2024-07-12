@@ -32,6 +32,7 @@ export default function FilterTab() {
     <div style={{display:'flex', justifyContent:'space-evenly' }}>
         {filterOptions.map((item, index)=>{
             return <AppIconButton 
+            key={index}
             styleProp={{marginTop:`${index*(-10)+(filterOptions.length-1)*10}px`}}
             imgSrc={item.imgSrc} title={item.title} 
             isSelected={currentIndex===index} 

@@ -3,8 +3,12 @@ import FilterTab from '../components/chooseBike/filterTab'
 import Card from '../components/common/card'
 import AppIconButton from '../components/appIconButton'
 import './css/choosebike.css'
+import { useNavigate } from "react-router-dom";
+
 
 export default function ChooseBikePage() {
+  const navigate = useNavigate();
+
   const [currentIndex, setCurrentIndex] = useState()
   const cards=[
     {imgSrc:'/assets/bikes/newBike.svg',
@@ -22,13 +26,15 @@ export default function ChooseBikePage() {
   return (
     <div >
       
-      <Card imgSrc={'/assets/common/homepagemainBike.svg'} 
-        styleProp={{margin:'30px'}} onClickFunc={()=>{}}/>
+          <Card imgSrc={'/assets/common/homepagemainBike.svg'} 
+        styleProp={{margin:'30px', textAlign:'center'}} onClickFunc={()=>{navigate('/description')}}/>
+    
  
         <FilterTab/>
         <div  style={{display:'flex', flexDirection:'row', flexWrap:'wrap', padding:'10px', justifyContent:'space-between'}}>
         {cards.map((item, index)=>{
            return  <Card imgSrc={item.imgSrc} 
+           key={index}
            headerSlot={
                   <div style={{display:'flex', justifyContent:'flex-end'}}>
                     <AppIconButton 

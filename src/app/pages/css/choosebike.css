@@ -1,4 +1,6 @@
 .choose-bike-page-banner{
-   
     clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 90%);
+    background: red;
+    text-align: center;
+    padding: 20px 20px 58px 20px;
 }

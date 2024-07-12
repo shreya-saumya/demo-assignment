@@ -9,7 +9,6 @@ export default function AppIconButton({isSelected, imgSrc,
     onClickFunc, 
     styleProp}) {
   return (
-    <>
     <button style={{ backgroundColor: isSelected ? secondary : ternary, 
     borderRadius:'10px', border:'1px',height,width, padding , ...styleProp,
     color:'white'
@@ -17,8 +16,6 @@ export default function AppIconButton({isSelected, imgSrc,
      onClick={onClickFunc}>
     {title || <img src={imgSrc} />}
     </button>
-
-    </>
    
   )
 }

@@ -6,10 +6,10 @@ import  './mainLayout.css'
 import AppIconButton from '../components/appIconButton';
 import { Outlet } from 'react-router-dom'
 
-export default function MainLayout() {
+export default function ProductDetailsLayout() {
   return (
-    <div class="wrapper">
-        <Header title={'Choose Your Bike'}  rightIcon={<AppIconButton imgSrc={'/assets/icons/search.svg'} isSelected />}/>
+         <div class="wrapper">
+        <Header title={'PEUGEOT - LR01'}  leftIcon={<AppIconButton imgSrc={'/assets/icons/chevron.left.svg'} isSelected />}/>
         <main>
             <div class="scrollable_content">
                 <Outlet/>
@@ -17,9 +17,9 @@ export default function MainLayout() {
 
         </main>
         <div class="footer">
-            <Footer/>
+            {/* <Footer/> */}
         </div>
     </div>
-  
+
   )
 }
