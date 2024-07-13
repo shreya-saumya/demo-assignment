@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import FilterTab from '../components/chooseBike/filterTab';
-import Card from '../components/common/card';
-import AppIconButton from '../components/appIconButton';
-import './css/choosebike.css';
+import FilterTab from '../../components/chooseBike/filterTab';
+import Card from '../../components/common/card';
+import AppIconButton from '../../components/appIconButton';
+import './choose-bike.css';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllProductList, setProductValue } from '../../redux/actions/productListAction';
+import { getAllProductList, setProductValue } from '../../../redux/actions/productListAction';
 
 export default function ChooseBikePage() {
   const navigate = useNavigate();
@@ -22,10 +22,9 @@ export default function ChooseBikePage() {
       <div >
       <Card
         startingCard
-        className='choose-bike-page-banner'
+        className='choose_bike_page--banner'
         imgSrc={product.flatOffProduct.imgSrc}
         key={0}
-        styleProp={{ margin: '30px 30px 0 30px', textAlign: 'center' }}
         onClickFunc={() => {
           dispatch(setProductValue(product.flatOffProduct));
           navigate('/description');
@@ -39,6 +38,7 @@ export default function ChooseBikePage() {
         {product.productList.map((item, index) => {
           return (
             <Card
+            className="choose_bike_page--cards-list"
               imgSrc={item.imgSrc}
               key={index}
               onClickFunc={() => {
@@ -46,7 +46,7 @@ export default function ChooseBikePage() {
                 navigate('/description');
               }}
               headerSlot={
-                <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <div className='choose_bike_page--favorite-button-wrapper'>
                   <AppIconButton
                     styleProp={{ background: 'none' }}
                     imgSrc={
@@ -61,7 +61,7 @@ export default function ChooseBikePage() {
                   />
                 </div>
               }
-              styleProp={{ transform: 'skew(0, 350deg)', padding: '20px' }}
+              
               bikeDetails={item.bikeDetails}
             />
           );

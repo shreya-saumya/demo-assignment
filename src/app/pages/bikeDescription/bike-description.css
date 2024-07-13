@@ -1,0 +1,48 @@
+.bike-description-modal-button {
+  box-shadow: 4px 4px 8px 0px #202633 inset;
+  box-shadow: -4px -4px 8px 0px #364055 inset;
+  padding: 10px 20px 10px 20px;
+}
+.bike_description-footer-wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -10px 40px 0px #1C222E;
+  border: 2px solid;
+  border-radius: 10px;
+  border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 69.23%);  
+}
+.bike_description-footer{
+  height: 70px;
+  border-top-left-radius: '42px';
+  border-top-right-radius: '42px';
+  background: '#262E3D'
+}
+.bike_description-sub-footer-button{
+  position: fixed;
+  bottom: 3%;
+  width: 40%;
+  right: 8%;
+  width: 160px;
+  height: 44px;
+  gap: 0px;
+  color:white;
+border-radius: 10px;
+opacity: 0px;
+
+}
+.bike_description-sub-footer-price{
+  position: fixed;
+  bottom: 3%;
+  color:#3D9CEA;
+  left:4%;
+  font-weight:400px
+}
+[data-rsbs-overlay]{
+  background: linear-gradient(157.91deg, #353F54 0%, #222834 58.47%);
+}
+.bike_description--desc-spec-btn-wrapper{
+  display: flex;
+  justify-content: space-around;
+   margin: 10px
+}

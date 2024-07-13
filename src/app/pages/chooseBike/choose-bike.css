@@ -1,10 +1,12 @@
-.choose-bike-page-banner {
+.choose_bike_page--banner {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   background: linear-gradient(167.4deg, rgba(54, 62, 81, 0.6) 25.94%, rgba(25, 30, 38, 0.6) 68.26%);
   backdrop-filter: blur(50px);
   border-radius: 10px;
   text-align: center;
   padding: 20px 20px 58px 20px;
+  margin: 30px 30px 0 30px;
+  text-align: center;
 }
 
 .choose_bike_page--grid-container {
@@ -26,4 +28,13 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
   }
+}
+
+.choose_bike_page--cards-list{
+  transform: skew(0, 350deg);
+  padding: 20px
+}
+.choose_bike_page--favorite-button-wrapper{
+  display: flex; 
+  justify-content: flex-end;
 }

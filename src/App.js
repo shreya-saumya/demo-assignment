@@ -2,8 +2,8 @@ import MainLayout from './app/layout/mainLayout';
 import './App.css';
 // import { Outlet, Link } from 'react-router-dom'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ChooseBikePage from './app/pages/chooseBikePage';
-import BikeDescription from './app/pages/bikeDescription';
+import ChooseBikePage from './app/pages/chooseBike/chooseBikePage';
+import BikeDescription from './app/pages/bikeDescription/bikeDescription';
 import ProductDetailsLayout from './app/layout/productDetailsLayout';
 // import Router from "./routes";
 export const secondary = '#37B6E9';
