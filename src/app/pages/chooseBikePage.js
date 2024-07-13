@@ -21,6 +21,7 @@ export default function ChooseBikePage() {
     <div>
       <div >
       <Card
+        startingCard
         className='choose-bike-page-banner'
         imgSrc={product.flatOffProduct.imgSrc}
         key={0}
